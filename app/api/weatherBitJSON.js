@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-const OPEN_WEATHER_MAP_URL = 'https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&key=7c6c9d70ecf24505980b7c4ccce4e6ac';
+const OPEN_WEATHER_MAP_URL = 'https://api.weatherbit.io/v2.0/forecast/daily?city=Raleigh,NC&days=7&key=7c6c9d70ecf24505980b7c4ccce4e6ac';
 
 module.exports = {
   getTemp() {
