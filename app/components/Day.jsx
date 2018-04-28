@@ -2,23 +2,35 @@ import React, {Component} from 'react';
 
 export class Day extends Component {
   render(){
-    //var {day} = this.props;
-    var day = "Monday";
-    var cels = 22;
-    var fahren = (cels*1.8)+32;
+    var {date, cels, fahr, icon, idx} = this.props;
 
-    var icon = "https://www.weatherbit.io/static/img/icons/t01d.png";
+    var date = new Date();
+    var today = date.getDay();
+    var requiredIdx = 0;
+
+    if((today + idx) > 6){
+      requiredIdx = 5 - today + idx;
+    } else {
+      requiredIdx = today + idx;
+    }
+
+    var week = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+    date = week[requiredIdx];
+
+    var icon = `https://www.weatherbit.io/static/img/icons/${icon}.png`;
     return (
-      <div>
+      <div className="day" onClick={() => this.props.details(idx, date)}>
         <div>
-          {day}
+          {date}
         </div>
-        <div>
+        <div className="images">
           <img src={icon} alt="icon"/>
         </div>
         <div>
-          {cels}
-          {fahren}
+          {cels} °C
+        </div>
+        <div>
+          {fahr} °F
         </div>
       </div>
     )

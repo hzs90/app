@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-var Main = require('./components/Main');
+import Main from 'Main';
 
 // Load foundation
 $(document).foundation();
@@ -10,6 +10,8 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-  <Main/>,
+  <div className="wrapper">
+    <Main/>
+  </div>,
   document.getElementById('app')
 );

@@ -1,0 +1,15 @@
+.container {
+  width: 100px;
+  margin:  auto;
+  background-image: linear-gradient(to top, #00d0cc 30%, #0063cc 80%);
+  min-width: 70rem;
+  justify-content: center;
+  padding: 40px;
+  padding-bottom: 250px;
+  color: white;
+
+  h7 {
+    color: #d2d2d2;
+    padding-bottom: 5em;
+  }
+}
