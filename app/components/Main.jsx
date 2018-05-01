@@ -30,6 +30,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
+    console.log("Thank you for the challenge :)");
     let week = {
       0: "SUNDAY",
       1: "MONDAY",

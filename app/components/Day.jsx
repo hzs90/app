@@ -9,7 +9,7 @@ export class Day extends Component {
     var requiredIdx = 0;
 
     if((today + idx) > 6){
-      requiredIdx = 5 - today + idx;
+      requiredIdx = Math.abs(7 - (today + idx));
     } else {
       requiredIdx = today + idx;
     }
